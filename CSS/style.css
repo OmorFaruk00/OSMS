@@ -65,13 +65,14 @@ background-color: red;
 /* footer */
 
 
-.side_menu ul li a{
-	color: red;
+.navbar ul li a{
+	color: black;
 
 
 }
-.side_menu ul li a.active{
+.navbar ul li a.active{
     background-color: red;
+    color: white;
     
 
 }

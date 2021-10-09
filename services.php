@@ -1,5 +1,15 @@
 <?php include 'header.php' ?>
 
+<!-- start osms service -->
+  <div class="container">
+    <div class="jumbotron ">
+      <h3 class="text-center pb-5">OSMS Service</h3>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Nam id voluptate aliquid laudantium qui corporis error dolore similique dicta doloribus tenetur aut veritatis, quisquam, sapiente deleniti sit temporibus possimus voluptatibus ad iste quod illum? Eligendi iure nisi repellendus quo libero. Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Nam id voluptate aliquid laudantium qui corporis error dolore similique dicta doloribus tenetur aut veritatis, quisquam, sapiente deleniti sit temporibus possimus voluptatibus ad iste quod illum? Eligendi iure nisi repellendus quo libero.</p>
+    </div>
+  </div>
+  <!-- end osms service -->
+
+
 <section class="py-5" id="service">
     <div class="container text-center ">
      <h2 class="py-5 ">Our Service</h2>

@@ -1,4 +1,5 @@
 <?php 
+define('PAGE', 'Logout');
 session_start();
 
 session_unset();

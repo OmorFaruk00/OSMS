@@ -24,7 +24,7 @@
 
 	<!-- Top Nav -->
 	<nav class="navbar navbar-dark fixed-top bg-danger flex-md-nowrap shadow">
-		<a href="user-profile.php" class="navbar-brand col-sm-3 col-md 2 font-weight-bold mr-0">OSMS</a>
+		<a href="index.php" class="navbar-brand col-sm-3 col-md 2 font-weight-bold mr-0">OSMS</a>
 
 		<h4 class="text-white px-5">Hi <?php echo  $_SESSION['name']; ?></h4>
 		
@@ -36,11 +36,11 @@
 			<div class="col-sm-2 bg-light sidebar py-3 ">
 				<div class="sidebar-sticky navbar">
 					<ul class="nav flex-column ">
-						<li class="nav-item "> <a class="nav-link active" href="user_profile.php"><i class="fas fa-user icon"></i>Profile</a></li>
-						<li class="nav-item "> <a class="nav-link " href="submit_requester.php"><i class=" fab fa-accessible-icon icon">Submit Rquester</i></a></li>
-						<li class="nav-item "> <a class="nav-link" href="service_status.php"><i class="fas fa-align-justify "></i>Service Status</i></a></li>
-						<li class="nav-item "> <a class="nav-link " href="change_password.php"><i class=" fas fa-key "> Change Password</i></a></li>
-						<li class="nav-item "> <a class="nav-link " href="logout.php"><i class=" fas fa-sign-out-alt ">Logout</i></a></li>
+						<li class="nav-item "> <a class="nav-link <?php if(PAGE == 'RequesterProfile'){echo 'active';} ?>" href="user_profile.php"><i class="fas fa-user"></i>Profile</a></li>
+						<li class="nav-item "> <a class="nav-link <?php if(PAGE == 'SubmitRequester'){echo 'active';} ?>" href="submit_requester.php"><i class=" fab fa-accessible-icon">Submit Rquester</i></a></li>
+						<li class="nav-item "> <a class="nav-link <?php if(PAGE == 'ServiceStatus'){echo 'active';} ?>" href="service_status.php"><i class="fas fa-align-justify"></i>Service Status</i></a></li>
+						<li class="nav-item "> <a class="nav-link <?php if(PAGE == 'ChangePassword'){echo 'active';} ?>" href="change_password.php"><i class=" fas fa-key"> Change Password</i></a></li>
+						<li class="nav-item "> <a class="nav-link <?php if(PAGE == 'Logout'){echo 'active';} ?> " href="logout.php"><i class=" fas fa-sign-out-alt ">Logout</i></a></li>
 
 					</ul>
 				</div>
@@ -48,7 +48,7 @@
 			<!-- End Side Bar 1st column-->
 
 	
-<script>
+<!-- <script>
 	 navbar = document.querySelector(".navbar").querySelectorAll("a");
 	 consol.log(navbar);
 
@@ -60,4 +60,4 @@
 	 	})
 	 });
 
-</script>
+</script> -->

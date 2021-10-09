@@ -13,11 +13,11 @@ if(isset($_POST['signin'])){
 
  if(mysqli_num_rows($result) > 0 ){
  
-    $error_message = "<div class='alert alert-danger mt-2' >This Email already exist Try anothoer on...</div>";
+    $error_message = "<div class='alert alert-danger mt-2 text-center' >This Email already exist Try anothoer on...</div>";
   }else{
     $sql1 = "INSERT INTO `user_ragistration`(`name`, `email`, `password`) VALUES ('{$name}','{$email}','{$password}')";
     if(mysqli_query($conn,$sql1)){
-      $error_message = "<div class='alert alert-success mt-2' >Acount Created Successfuly..</div>";
+      $error_message = "<div class='alert alert-success mt-2 text-center' >Acount Created Successfuly..</div>";
         // header ("Location:http://localhost/OSMS/index.php");
       }
   }

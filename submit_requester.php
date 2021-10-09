@@ -1,5 +1,6 @@
 <?php 
 define('TITLE', 'Submit Requester ');
+define('PAGE', 'SubmitRequester');
 include "user_header.php"; 
 include "Database.php";
 if(isset($_POST["submit"])){
