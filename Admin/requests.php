@@ -18,7 +18,8 @@ if(!isset($_SESSION['admin_login'])){
 	$sql = "SELECT * FROM `submit_requester`";
 	$result = $conn->query($sql);
 	if($result->num_rows > 0 ){
-		while($row = $result->fetch_assoc()){?>
+		while($row = $result->fetch_assoc()){
+			?>
 			<div class="card mb-5">
 				<div class="card-header">Request ID : <?php echo $row['request_id']; ?></div>
 				<div class="card-body">
