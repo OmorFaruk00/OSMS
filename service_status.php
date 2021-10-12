@@ -4,7 +4,7 @@ if(!isset($_SESSION['admin_login'])){
 	define('TITLE', 'Status ');
 	define('PAGE', 'ServiceStatus');
 	include "user_header.php"; 
-	include 'database.php.'; ?>
+	include '.php.'; ?>
 	<div class="col-sm-6 mt-5 mx-5">
 		<form action="" method="post" class="form-inline d-print-none">
 			<div class="form-group ">

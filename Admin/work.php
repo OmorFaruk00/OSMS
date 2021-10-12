@@ -1,5 +1,6 @@
 <?php 
 define('TITLE', 'work Order');
+define('PAGE', 'Workrder');
 include "dashbord_header.php";
 include 'dbconnect.php';
 if(!isset($_SESSION['admin_login'])){
@@ -11,8 +12,8 @@ if(!isset($_SESSION['admin_login'])){
 	$row = $result->fetch_assoc(); ?>
 
 	<div class="col-md-6 col-sm-6 mx-5">
-		<h4 class="text-center mt-5 mb-3">Assign Works Details</h4>
-		<table class="table table-bordered">
+		<h4 class="text-center mt-5 mb-3 offset-6">Assign Works Details</h4>		
+		<table class="table table-bordered offset-3">			
 			<tbody>
 				<tr>
 					<td>Request ID</td>
@@ -73,12 +74,12 @@ if(!isset($_SESSION['admin_login'])){
 			</tbody> 	 	
 		</table>
 		<div class="text-center mb-5">			
-			<form action="" class="mt-3 d-print-none" method="POST">
-				<input type="submit" class="btn btn-danger mr-2" value="print" onClick="window.print()">
-				<?php if(isset($_POST["close"])){?>
-					<script>window.location="http://localhost/OSMS/Admin/work_order.php";</script>		
-				<?php } ?>
-				<input type="submit" class="btn btn-secondary" value="close" name="close"> 	 		
+			<form action="" class="mt-4 d-print-none offset-6" method="POST">
+				<input type="submit" class="btn btn-primary mr-2" value="print" onClick="window.print()">							
+				<input type="submit" class="btn btn-danger" value="close" name="close"> 	 		
 			</form> 	 	
 		</div>
+		<?php if(isset($_POST["close"])){?>
+					<script>window.location="http://localhost/OSMS/Admin/work_order.php";</script>		
+				<?php } ?>
 		<?php include'dashbord_footer.php' ?>

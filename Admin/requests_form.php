@@ -1,7 +1,4 @@
-	
-<?php 
-if(!isset($_SESSION['admin_login'])){
-	header("Location:http://localhost/OSMS/Admin/");}
+<?php if(!isset($_SESSION['admin_login'])){echo"<script>location.href='index.php'</script>";}
 	if(isset($_REQUEST['view'])){
 		$get_id = $_REQUEST['id'];
 		$sql = "SELECT * FROM `submit_requester` WHERE request_id = {$get_id }";
@@ -80,9 +77,9 @@ if(!isset($_SESSION['admin_login'])){
 						<input type="date" class="form-control" required name="date">
 					</div>				
 				</div>							
-				<button class="btn btn-danger mr-3 mt-2" name="assign">Assign</button>
+				<button class="btn btn-primary mr-3 mt-2" name="assign">Assign</button>
 				
-				<button class="btn btn-primary mt-2" name="close">Close</button>
+				<button class="btn btn-danger mt-2" name="close">Close</button>
 			</form>
 		</div>
 		<!--  request form view-->

@@ -3,9 +3,8 @@ define('TITLE', 'Requests');
 define('PAGE', 'Requests');
 include "dashbord_header.php";
 include 'dbconnect.php';
-if(!isset($_SESSION['admin_login'])){
-	header("Location:http://localhost/OSMS/Admin/");
-}
+if(!isset($_SESSION['admin_login'])){echo"<script>location.href='index.php'</script>";}
+
 // Requests Close
 	if(isset($_REQUEST['close'])){
 	$get_id = $_REQUEST['id'];
@@ -29,8 +28,8 @@ if(!isset($_SESSION['admin_login'])){
 					<div class="float-right">
 						<form action="" method="POST">
 							<input type="hidden" name="id" value=<?php echo $row['request_id']; ?>>
-							<input  type="submit" name ="view" class="btn btn-danger mt-3 mr-2" value="View" >
-							<input type="submit" name ="close" class="btn btn-secondary mt-3 " value="Close" >
+							<input  type="submit" name ="view" class="btn btn-primary mt-3 mr-2" value="View" >
+							<input type="submit" name ="close" class="btn btn-danger mt-3 " value="Close" >
 						</form>
 					</div>
 				</div>

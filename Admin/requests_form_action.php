@@ -1,4 +1,4 @@
-<?php
+<?phpif(!isset($_SESSION['admin_login'])){echo"<script>location.href='index.php'</script>";}
 include 'dbconnect.php';				
 if(isset($_POST["assign"])){
 	$request_id = $_POST["id"];
@@ -25,7 +25,7 @@ if(isset($_POST["assign"])){
 	}else{
 		$sql1 = "INSERT INTO `assign_work`(`request_id`, `request-info`, `request-desc`, `request-name`, `request-add1`, `request-add2`, `request-city`, `request-state`, `request-zip`, `request-email`, `request-mobile`, `ass_tech`, `ass_date`) VALUES ('$request_id' ,'$request_info','$request_desc', '$request_name', '$request_add1', '$request_add2', '$request_city', '$request_state', '$request_zip', '$request_email', '$request_mobile','$assign_tech', '$assign_date')";
 		if($conn->query($sql1) == TRUE){
-			$alert_message = "<div class='alert alert-success text-center'>Assign Work Successfull...</div>";
+			$alert_message = "<div class='alert alert-success text-center'>Assign Work Successfully...</div>";
 			?>
 			<script>window.location.href ="http://localhost/OSMS/Admin/requests.php?alert_message='<?php echo $alert_message;?>'"</script>
 			<?php
@@ -37,6 +37,7 @@ if(isset($_POST["assign"])){
 		}
 	}	
 }?>
-<?php if(isset($_POST["close"])){?>
-	<script>window.location="http://localhost/OSMS/Admin/requests.php";</script>		
-<?php } ?>
+<!-- close button -->
+<?php if(isset($_POST["close"])){
+	echo"<script>window.location.href='requests.php';</script>";		
+} ?>
