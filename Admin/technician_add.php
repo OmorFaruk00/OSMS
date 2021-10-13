@@ -6,6 +6,8 @@ if(!isset($_SESSION['admin_login'])){echo"<script>location.href='index.php'</scr
 ?>
 	<div class="col-sm-6">		
 		<form action="technician_add_action.php" method="POST" class="jumbotron offset-4 mt-5">
+			<?php if(isset($_GET['alert_message'])){echo $_GET['alert_message'];	
+		echo'<script>setTimeout(function(){window.location.href ="technician.php";}, 2000);</script>';} ?>
 			<h2 class="text-center ">Add Technician</h2>
 			<div class="form-group">
 				<label for="">Name</label>

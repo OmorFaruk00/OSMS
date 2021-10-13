@@ -38,6 +38,7 @@
 					<ul class="nav flex-column ">
 						<li class="nav-item "> <a class="nav-link <?php if(PAGE == 'RequesterProfile'){echo 'active';} ?>" href="user_profile.php"><i class="fas fa-user"></i>Profile</a></li>
 						<li class="nav-item "> <a class="nav-link <?php if(PAGE == 'SubmitRequester'){echo 'active';} ?>" href="submit_requester.php"><i class=" fab fa-accessible-icon">Submit Rquester</i></a></li>
+						<li class="nav-item "> <a class="nav-link <?php if(PAGE == 'ProductDetails'){echo 'active';} ?>" href="product_details.php"><i class=" fas fa-eye">Product Details</i></a></li>
 						<li class="nav-item "> <a class="nav-link <?php if(PAGE == 'ServiceStatus'){echo 'active';} ?>" href="service_status.php"><i class="fas fa-align-justify"></i>Service Status</i></a></li>
 						<li class="nav-item "> <a class="nav-link <?php if(PAGE == 'ChangePassword'){echo 'active';} ?>" href="change_password.php"><i class=" fas fa-key"> Change Password</i></a></li>
 						<li class="nav-item "> <a class="nav-link <?php if(PAGE == 'Logout'){echo 'active';} ?> " href="logout.php"><i class=" fas fa-sign-out-alt ">Logout</i></a></li>

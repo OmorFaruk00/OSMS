@@ -1,6 +1,6 @@
 <?php
 define('TITLE', 'Change Password');
- define('PAGE', 'ChangePassword');
+define('PAGE', 'ChangePassword');
 include "user_header.php";
 include "Database.php";
 

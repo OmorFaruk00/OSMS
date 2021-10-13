@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
 	$quantity = $_POST['quantity'];
 	$price = $_POST['price'];
 	$total = $_POST['t_price'];
-	$date = $_POST['date'];
+	$date = $_POST['s_date'];
 
 	$sql = "INSERT INTO `customer_selling`(`cust_name`, `cust_add`, `p_name`, `p_quantity`, `p_price`, `t_price`, `date`) VALUES ('$c_name', '$c_address', '$p_name', '$quantity', '$price', '$total', '$date')";
 	

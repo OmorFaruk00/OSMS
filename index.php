@@ -39,7 +39,7 @@
             <a class="nav-link " href="#service">Service</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="#signin">Sign Up</a>
+            <a class="nav-link " href="signin.php">Sign Up</a>
           </li>  
           <li class="nav-item">
             <a class="nav-link " href="login.php">Log In</a>
@@ -100,7 +100,7 @@
      <h2 class="text-center mt-5">Create an Account</h2>
      <div class="row mt-5">
       <div class="col-md-6 offset-md-3">
-        <form action="" method="post" class="shadow-lg p-5 bg-white">
+        <form action="signin.php" method="post" class="shadow-lg p-5 bg-white">        
           <div class="form-group">
             <i class="fas fa-user"></i><label for="" class="font-weight-bold pl-2">Name</label>
             <input type="text" class="form-control" placeholder="Enter Name" name="name">           

@@ -43,7 +43,7 @@ $row = $result->fetch_assoc();
 			</tr>
 			<tr>
 				<th>Date</th>
-				<th><?php echo $row['date']; ?></th>
+				<th><?php echo $row['s_date']; ?></th>
 			</tr>
 			<tr>
 				<td>

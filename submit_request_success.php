@@ -1,5 +1,6 @@
 <?php
 define('TITLE', 'Request Success');
+define('PAGE', 'SubmitRequester');
 include "user_header.php";
 include "Database.php";
 
@@ -36,7 +37,8 @@ if($result->num_rows == 1){
 	<tr>
 	<td>
 	<form class='d-print-none'>
-	<input class='btn btn-danger' type='submit' value='Print' onClick='window.print()'>
+	<input class='btn btn-primary mr-3' type='submit' value='Print' onClick='window.print()'>
+	
 	</form>
 	</td>
 	

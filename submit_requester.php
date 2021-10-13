@@ -43,7 +43,7 @@ if(isset($_POST["submit"])){
 ?>
 
 
-<div class="col--sm-8  col-md-9  ml-5">
+<div class="col--sm-8  col-md-9  ml-5 mt-4">
 	<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
 		<div class="form-group">
 			<label for="">Request Info</label>

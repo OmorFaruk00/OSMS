@@ -2,8 +2,8 @@
 define('TITLE', 'Assets');
 define('PAGE', 'Assets');
 include "dashbord_header.php";
-if(!isset($_SESSION['admin_login'])){echo"<script>location.href='index.php'</script>";}
 include "database.php";
+if(!isset($_SESSION['admin_login'])){echo"<script>location.href='index.php'</script>";}
 $db = new Database;
 $limit = 5;
 $db->select('asset',"*",null,null,null,$limit);

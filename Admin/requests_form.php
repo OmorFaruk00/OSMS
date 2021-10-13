@@ -79,7 +79,7 @@
 				</div>							
 				<button class="btn btn-primary mr-3 mt-2" name="assign">Assign</button>
 				
-				<button class="btn btn-danger mt-2" name="close">Close</button>
+				<a href="requests.php"><button class="btn btn-danger mt-2" name="close">Close</button></a>
 			</form>
 		</div>
 		<!--  request form view-->

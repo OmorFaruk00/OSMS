@@ -1,5 +1,5 @@
 <?php 
-define('TITLE', 'Requester Profile');
+define('TITLE', 'Profile');
 define('PAGE', 'RequesterProfile');
 include "user_header.php";
 include "Database.php";
@@ -20,7 +20,7 @@ if(isset($_POST['update'])){
 ?>
 
 <!-- Start Profile Area 2st column -->
-<div class="col-sm-6 mt-3 ml-5">
+<div class="col-sm-4 mt-3 ml-5 ">
 	<form action="" method="POST"> 
 		<div class="form-group">
 			<label for="">Name</label>
