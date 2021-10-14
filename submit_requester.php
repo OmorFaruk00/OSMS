@@ -4,8 +4,6 @@ define('PAGE', 'SubmitRequester');
 include "user_header.php"; 
 include "Database.php";
 if(isset($_POST["submit"])){
-
-
 	$request_info = $_POST["request"];
 	$request_desc = $_POST["desc"];
 	$request_name = $_POST["name"];
@@ -19,17 +17,11 @@ if(isset($_POST["submit"])){
 	$request_date = $_POST["date"];
 
 	$sql = "INSERT INTO `submit_requester`(`request-info`, `request-desc`, `request-name`, `request-add1`, `request-add2`, `request-city`, `request-state`, `request-zip`, `request-email`, `request-mobile`, `request-date`) VALUES ('$request_info','$request_desc', '$request_name', '$request_add1', '$request_add2', '$request_city', '$request_state', '$request_zip', '$request_email', '$request_mobile','$request_date')";
-
-
 	if($conn->query($sql) == TRUE){
-
 		$last_id = $conn->insert_id;
-
 		$_SESSION['last_id'] = $last_id;
 		echo $_SESSION['last_id'] ;
-
 		$alert_message = "<div class='alert alert-danger text-center'>Request Successfull...</div>";
-
 		header("Location:http://localhost/OSMS/submit_request_success.php");
 
 	}

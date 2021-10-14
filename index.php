@@ -58,7 +58,7 @@
       <h1>Welcome to OSMS</h1>
       <p >Customer's Happiness is  Our Aim</p>
       <a href="login.php" class="btn btn-primary mr-4">Log In</a>
-      <a href="signin.php" class="btn btn-danger ">Sign In</a>
+      <a href="signin.php" class="btn btn-danger ">Sign Up</a>
     </div>
   </header>
   <!-- end header -->
@@ -226,7 +226,7 @@
 
       <div class="col-md-6  text-right">
         <small>Designed by Omor Faruk &copy;2021</small>
-        <small class="ml-2"><a href="" class="footer_admin">Admin Login</a></small>
+        <small class="ml-2"><a href="Admin/index.php" class="footer_admin">Admin Login</a></small>
       </div>
     </div>
   </div>

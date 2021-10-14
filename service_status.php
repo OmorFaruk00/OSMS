@@ -12,10 +12,8 @@ include 'database.php.';
 		</div>
 		<button class="btn btn-danger">Search</button>
 	</form>
-	<?php if(isset($_GET['alert_message'])){echo $_GET['alert_message'];
-		$_GET['alert_message'] = NULL; ?>
-		<script>setTimeout(function(){window.location.href ="http://localhost/OSMS/service_status.php";	}, 2000);</script>
-	<?php } ?>	<?php
+	<?php if(isset($_GET['alert_message'])){echo $_GET['alert_message'];	
+	echo'<script>setTimeout(function(){window.location.href ="http://localhost/OSMS/service_status.php"; }, 2000);</script>'; } 
 	if(isset($_REQUEST['checkid'])){
 		$sql = "SELECT * FROM `assign_work` WHERE request_id = '{$_REQUEST['checkid']}'";
 		$result = $conn->query($sql);
@@ -91,11 +89,23 @@ include 'database.php.';
 			</div>
 			<?php 
 		} else{
+			$sql1 = "SELECT * FROM `submit_requester` WHERE request_id = '{$_REQUEST['checkid']}'";
+			$result1 = $conn->query($sql1);
+			$row1 = $result1->fetch_assoc();
+			if($row1['request_id'] == $_REQUEST['checkid']){ 
 
-			$alert_message = "<div class='alert alert-success text-center'>Your Request Is Still Pending...</div>";
-			?>
-			<script>window.location.href ="http://localhost/OSMS/service_status.php?alert_message='<?php echo $alert_message;?>'"</script>
-		<?php } 
+				$alert_message = "<div class='alert alert-success text-center col-sm-6'>Your Request Is Still Pending...</div>";
+				?>
+				<script>window.location.href ="http://localhost/OSMS/service_status.php?alert_message='<?php echo $alert_message;?>'"</script><?php		
+			}
+			else{
+				if($row1['request_id'] !== $_REQUEST['checkid']){
+					$alert_message = "<div class='alert alert-success text-center col-sm-8'>Your Request Id Is Wrong? Please Enter Your Correct Id..</div>";
+					?>
+					<script>window.location.href ="http://localhost/OSMS/service_status.php?alert_message='<?php echo $alert_message;?>'"</script><?php	
+				}
+			}
+		} 
 	} ?>
-	</div>
-	<?php include "user_footer.php"; ?>
+</div>
+<?php include "user_footer.php"; ?>

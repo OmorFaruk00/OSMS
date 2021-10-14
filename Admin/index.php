@@ -52,8 +52,8 @@ if(isset($_POST['login'])){
    	<div class="text-center">
    		<i class="fas fa-user-secret fa-1x pr-2 text-danger"></i><span style="font-size: 20px;">Admin Area (Demo)<span>
    	</div>
-     <div class="row mt-5">
-      <div class="col-md-6 offset-md-3">
+     <div class="row mt-5 offset-4">
+      <div class="col-md-6 ">
         <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post" class="shadow-lg p-5 bg-white">
        
           <div class="form-group">
@@ -67,6 +67,9 @@ if(isset($_POST['login'])){
           <button class="btn btn-danger btn-block font-weight-bold shadow-sm mt-5"  name="login">Log In</button> 
            <?php if(isset($error_message)){ echo $error_message; } ?>        
         </form>
+        <div class="text-right"><a href="../index.php" class=" btn btn-outline-success  mt-5 font-weight-bold shadow-sm">Back To Home</a>
+          
+        </div>
       </div>      
     </div>
   </div>
