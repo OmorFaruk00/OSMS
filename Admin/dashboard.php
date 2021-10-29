@@ -3,8 +3,8 @@ define('TITLE', 'Dashbord');
 define('PAGE', 'Dashborad');
 include'dashbord_header.php';
 include 'dbconnect.php';
-if(!isset($_SESSION['admin_login'])){
-	header("Location:http://localhost/OSMS/Admin/"); }
+if(!isset($_SESSION['is_login'])){
+	header("Location:http://localhost/OSMS/"); }
 // Requests
   $sql = "SELECT COUNT(request_id)FROM `submit_requester`";
   $result = $conn->query($sql);

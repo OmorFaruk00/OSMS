@@ -39,10 +39,10 @@
             <a class="nav-link " href="#service">Service</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="signin.php">Sign Up</a>
+            <a class="nav-link " href="" data-toggle="modal" data-target="#exampleModalLong">Sign Up</a>
           </li>  
           <li class="nav-item">
-            <a class="nav-link " href="login.php">Log In</a>
+            <a class="nav-link " href="" data-toggle="modal" data-target="#loginmodal">Log In</a>
           </li> 
           <li class="nav-item">
             <a class="nav-link " href="#contacts">Contacts</a>
@@ -57,8 +57,8 @@
     <div class="header_side pt-5 text-white ">
       <h1>Welcome to OSMS</h1>
       <p >Customer's Happiness is  Our Aim</p>
-      <a href="login.php" class="btn btn-primary mr-4">Log In</a>
-      <a href="signin.php" class="btn btn-danger ">Sign Up</a>
+      <a href="" class="btn btn-primary mr-4"  data-toggle="modal" data-target="#loginmodal">Log In</a>
+      <a href="" class="btn btn-danger"  data-toggle="modal" data-target="#exampleModalLong">Sign Up</a>
     </div>
   </header>
   <!-- end header -->
@@ -93,35 +93,73 @@
    </div>
  </section>
  <!-- end our service section -->
-
- <!-- signin grom -->
- <section id="signin" class="bg-light py-5">
-   <div class="container mb-5">
-     <h2 class="text-center mt-5">Create an Account</h2>
-     <div class="row mt-5">
-      <div class="col-md-6 offset-md-3">
-        <form action="signin.php" method="post" class="shadow-lg p-5 bg-white">        
+ <!-- signin grom --> 
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLongTitle">Create Account</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> 
+          <span aria-hidden="true">&times;</span>
+        </button>            
+      </div>
+      <div class="modal-body">
+        <form action="" method="post" id="signUp_form">        
           <div class="form-group">
             <i class="fas fa-user"></i><label for="" class="font-weight-bold pl-2">Name</label>
-            <input type="text" class="form-control" placeholder="Enter Name" name="name">           
+            <input type="text" class="form-control" placeholder="Enter Name" required id="name">           
           </div>
           <div class="form-group">
             <i class="fas fa-user"></i><label for="" class="font-weight-bold pl-2">Email</label>
-            <input type="text" class="form-control" placeholder="Enter Email" name="email">           
+            <input type="email" class="form-control" placeholder="Enter Email" required id="email">           
           </div>
           <div class="form-group">
             <i class="fas fa-key"></i><label for="" class="font-weight-bold pl-2">Password</label>
-            <input type="text" class="form-control" placeholder="Enter Password" name="password">           
+            <input type="password" class="form-control" placeholder="Enter Password" required id="password">           
           </div>
-          <button class="btn btn-danger btn-block font-weight-bold shadow-sm mt-5" name="signin">Sign Up</button>         
+          <input type="hidden" id="role" value="user">
+           <div id="signin_alert" style="height: 10px; width: 80%"></div>
         </form>
-      </div>      
-    </div>
+      </div>
+      <div class="modal-footer float-right">
+      <button  class="btn btn-primary" id="signup">Sign Up</button>                               
+     </div>    
   </div>
-</section>
-
+</div>
+</div>
 <!-- signin grom -->
-
+<!-- login form -->
+<div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLongTitle">LogIn Here</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> 
+          <span aria-hidden="true">&times;</span>
+        </button>            
+      </div>
+      <div class="modal-body">
+        <form action="" method="post" id="login_form">          
+          <div class="form-group">
+            <i class="fas fa-user"></i><label for="" class="font-weight-bold pl-2">Email</label>
+            <input type="email" class="form-control" placeholder="Enter Email" required id="useremail">           
+          </div>
+          <div class="form-group">
+            <i class="fas fa-key"></i><label for="" class="font-weight-bold pl-2">Password</label>
+            <input type="password" class="form-control" placeholder="Enter Password" required id="userpassword">           
+          </div>
+          <input type="hidden" id="role" value="user">
+           <div id="login_alert" style="height: 10px; width: 80%"></div>
+        </form>
+      </div>
+      <div class="modal-footer float-right">
+      <button  class="btn btn-primary" id="login">LogIn</button>                               
+     </div>    
+  </div>
+</div>
+</div>
+<!-- login form -->
 <!-- happy customer -->
 <section class="jumbotron">
   <div class="container">
@@ -211,6 +249,9 @@
 <!-- contact section -->
 
 
+
+
+
 <!-- footer -->
 
 <footer class="container-fluid bg-dark mt-5 text-white">
@@ -237,6 +278,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="JS/user_action.js"></script>
 
 </body>
 </html>
