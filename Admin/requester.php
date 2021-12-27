@@ -3,8 +3,7 @@ define('TITLE', 'Requester');
 define('PAGE', 'Requester');
 include "dashbord_header.php";
 include "database.php";
-if(!isset($_SESSION['admin_login'])){echo"<script>location.href='index.php'</script>";}
-
+if(!isset($_SESSION['is_login'])){header("Location:http://localhost/OSMS/");}
 $db = new Database;
 $limit = 7;
 $db->select('user_ragistration',"*",null,null,null,$limit);
@@ -35,12 +34,11 @@ $result = $db->getResult();?>
 	</table>
 	<?php $db->pagination('user_ragistration',null,null,$limit); ?>
 </div>
-
 <?php include'dashbord_footer.php'?>
 
 
 
 
 
- 
+
 

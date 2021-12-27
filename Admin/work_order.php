@@ -3,8 +3,8 @@ define('TITLE', 'work Order');
 define('PAGE', 'Workrder');
 include "dashbord_header.php";
 include 'dbconnect.php';
-if(!isset($_SESSION['admin_login'])){
-	header("Location:http://localhost/OSMS/Admin/");}
+if(!isset($_SESSION['is_login'])){
+	header("Location:http://localhost/OSMS/");}
 	$sql = "SELECT * FROM `assign_work`";
 	$result = $conn->query($sql);
 	if($result->num_rows > 0) { ?>

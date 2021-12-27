@@ -3,7 +3,7 @@ define('TITLE', 'Assets');
 define('PAGE', 'Assets');
 include "dashbord_header.php";
 include "database.php";
-if(!isset($_SESSION['admin_login'])){echo"<script>location.href='index.php'</script>";}
+if(!isset($_SESSION['is_login'])){header("Location:http://localhost/OSMS/");}	
 $db = new Database;
 $limit = 5;
 $db->select('asset',"*",null,null,null,$limit);

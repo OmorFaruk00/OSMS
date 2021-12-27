@@ -1,4 +1,5 @@
-<?php if(!isset($_SESSION['admin_login'])){echo"<script>location.href='index.php'</script>";}
+<?php 
+if(!isset($_SESSION['is_login'])){header("Location:http://localhost/OSMS/");}	
 	if(isset($_REQUEST['view'])){
 		$get_id = $_REQUEST['id'];
 		$sql = "SELECT * FROM `submit_requester` WHERE request_id = {$get_id }";

@@ -3,8 +3,7 @@ define('TITLE', 'Requests');
 define('PAGE', 'Requests');
 include "dashbord_header.php";
 include 'dbconnect.php';
-if(!isset($_SESSION['admin_login'])){echo"<script>location.href='index.php'</script>";}
-
+if(!isset($_SESSION['is_login'])){header("Location:http://localhost/OSMS/");}
 // Requests Close
 	if(isset($_REQUEST['close'])){
 	$get_id = $_REQUEST['id'];

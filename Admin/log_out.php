@@ -4,7 +4,7 @@ define('PAGE', 'Logout');
 include "dashbord_header.php";
 session_unset();
 session_destroy();
-header("Location:http://localhost/OSMS/Admin/index.php");
+header("Location:http://localhost/OSMS/");
 
 ?>
 

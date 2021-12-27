@@ -2,9 +2,8 @@
 define('TITLE', 'Technician');
 define('PAGE', 'Technician');
 include "dashbord_header.php";
-if(!isset($_SESSION['admin_login'])){echo"<script>location.href='index.php'</script>";}
 include "database.php";
-
+if(!isset($_SESSION['is_login'])){header("Location:http://localhost/OSMS/");}	
 $db = new Database;
 $limit = 5;
 $db->select('technician',"*",null,null,null,$limit);
@@ -14,8 +13,6 @@ $result = $db->getResult();?>
 		<a href="technician_add.php" class="btn btn-success float-right "><i class="fas fa-plus fa-2x"></i></a>
 		<p class="bg-dark text-white py-2 text-center mt-3 offset-1" style="width: 800px;">List of Technician</p>
 	</div>
-	
-
 	<table class="table table-striped mx-5 text-center">
 		<thead>
 			<tr>
@@ -45,5 +42,4 @@ $result = $db->getResult();?>
 	</table>
 	<?php $db->pagination('technician',null,null,$limit); ?>
 </div>
-
 <?php include'dashbord_footer.php' ?>

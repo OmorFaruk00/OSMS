@@ -3,7 +3,8 @@ define('TITLE', 'Workreport');
 define('PAGE', 'Workreport');
 include "dashbord_header.php";
 include 'dbconnect.php';
-if(!isset($_SESSION['admin_login'])){echo"<script>location.href='index.php'</script>";}
+if(!isset($_SESSION['is_login'])){
+	header("Location:http://localhost/OSMS/");}
 
 ?>
 <div class="col-sm-9 col-md-10">

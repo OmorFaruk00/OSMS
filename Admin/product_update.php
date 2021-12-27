@@ -3,20 +3,18 @@ define('TITLE', 'product Update');
 define('PAGE', 'Assets');
 include "dashbord_header.php";
 include 'dbconnect.php';
-if(!isset($_SESSION['admin_login'])){echo"<script>location.href='index.php'</script>";}
+if(!isset($_SESSION['is_login'])){header("Location:http://localhost/OSMS/");}
 $row['p_name'] = '';
 $row['p_dop'] = '';
 $row['p_available'] = '';
 $row['p_total'] = '';
 $row['p_original_cost'] = '';
 $row['p_selling_cost'] = '';
-
 if(isset($_POST["edit"])){
 	$sql = "SELECT * FROM `asset` WHERE p_id = '{$_POST['id']}'";
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
 }?>
-
 <div class="col-sm-6">		
 	<form action="product_update_action.php" method="POST" class="jumbotron offset-4 mt-3">
 		<?php if(isset($_GET['alert_message'])){echo $_GET['alert_message'];	

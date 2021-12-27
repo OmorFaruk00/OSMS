@@ -34,12 +34,11 @@
 						<li class="nav-item "> <a class="nav-link <?php if(PAGE == 'Requests'){echo 'active';} ?>" href="requests.php"><i class="fas fa-address-card mr-2"></i>Requests</i></a></li>
 						<li class="nav-item "> <a class="nav-link <?php if(PAGE == 'Assets'){echo 'active';} ?>" href="assets.php"><i class="fas fa-coins mr-2"></i>Assets</i></a></li>
 						<li class="nav-item "> <a class="nav-link <?php if(PAGE == 'Technician'){echo 'active';} ?>" href="technician.php"><i class="fas fa-cogs mr-2"></i>Technician</i></a></li>
-						<li class="nav-item "> <a class="nav-link <?php if(PAGE == 'Requester'){echo 'active';} ?>" href="requester.php"><i class="fas fa-user mr-2"></i>Requester</i></a></li>
+						<li class="nav-item "> <a class="nav-link <?php if(PAGE == 'Requester'){echo 'active';} ?>" href="requester.php"><i class="fas fa-user mr-2"></i>Users</i></a></li>
 						<li class="nav-item "> <a class="nav-link <?php if(PAGE == 'Sellreport'){echo 'active';} ?>" href="sell_report.php"><i class="fas fa-file-alt mr-2"></i>Sell Report</i></a></li>
 						<li class="nav-item "> <a class="nav-link <?php if(PAGE == 'Workreport'){echo 'active';} ?>" href="work_report.php"><i class="fas fa-file-alt mr-2"></i>Work Report</i></a></li>
 						<li class="nav-item "> <a class="nav-link <?php if(PAGE == 'ChangePassword'){echo 'active';} ?>" href="change_password.php"><i class=" fas fa-key "> Change Password</i></a></li>
 						<li class="nav-item "> <a class="nav-link <?php if(PAGE == 'Logout'){echo 'active';} ?> " href="log_out.php"><i class=" fas fa-sign-out-alt mr-2">Logout</i></a></li>
-
 					</ul>
 				</div>
 			</div>

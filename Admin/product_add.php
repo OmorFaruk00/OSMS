@@ -2,7 +2,7 @@
 define('TITLE', 'product Add');
 define('PAGE', 'Assets');
 include "dashbord_header.php";
-if(!isset($_SESSION['admin_login'])){echo"<script>location.href='index.php'</script>";}
+if(!isset($_SESSION['is_login'])){header("Location:http://localhost/OSMS/");}
 ?>
 <div class="col-sm-6">		
 	<form action="product_add_action.php" method="POST" class="jumbotron offset-4 mt-3">
